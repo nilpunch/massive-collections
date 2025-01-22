@@ -27,9 +27,11 @@
 	{
 		public UsageWithRegistry()
 		{
+			// Create service and save first initial frame
 			var footballService = new FootballService();
 			footballService.SaveFrame();
 
+			// Connect service to registry rollbacks
 			var massiveRegistry = new MassiveRegistry();
 			massiveRegistry.FrameSaved += footballService.SaveFrame;
 			massiveRegistry.Rollbacked += footballService.Rollback;
@@ -39,11 +41,12 @@
 			footballService.IsMatchOver.Value = true;
 			footballService.WinningPlayers.Add(Entity.Dead);
 
-			massiveRegistry.Rollback(0); // Restore to last SaveFrame call.
+			// Restore to last SaveFrame call.
+			massiveRegistry.Rollback(0);
 
 			if (footballService.IsMatchOver.Value == false)
 			{
-				// We rolled back.
+				// We successfully rolled back.
 			}
 		}
 	}
