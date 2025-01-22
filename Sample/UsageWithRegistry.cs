@@ -27,11 +27,11 @@
 	{
 		public UsageWithRegistry()
 		{
-			// Create service and save first initial frame
+			// Create service and save first initial frame.
 			var footballService = new FootballService();
 			footballService.SaveFrame();
 
-			// Connect service to registry rollbacks
+			// Connect service to registry rollbacks.
 			var massiveRegistry = new MassiveRegistry();
 			massiveRegistry.FrameSaved += footballService.SaveFrame;
 			massiveRegistry.Rollbacked += footballService.Rollback;
