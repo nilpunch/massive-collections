@@ -1,0 +1,17 @@
+{
+    "name": "Massive.Collections.Samples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:cf2e24c64a0d02f4690b9be74f35390f",
+        "GUID:4b7cf57a9715bb54bb19516e2e9b1fa5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
